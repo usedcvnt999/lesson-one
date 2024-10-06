@@ -16,14 +16,9 @@ def create():
     students.update({student_code: {
         "Name": input(f"Введите имя студента: "),
         "Age": input(f"Введите возраст студента: "),
-        "Subjects": []
+        "Subjects": [input(f"Введите два предмета студента\n Введите: ") for _ in range (0, 2)]
     }})
-    first_subject = input(f"Введите два предмета студента\n Первый предмет: ")
-    second_subject = input(f"Второй предмет: ")
-    students[student_code]["Subjects"].append(first_subject)
-    students[student_code]["Subjects"].append(second_subject)
     print(students)
-
 
 
 def user_menu(placeholder: int):
