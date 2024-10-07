@@ -28,11 +28,3 @@ students = {
 
 
 
-delete_tuple = [input(f"Введите ID студентов которых хотите удалить: ") for i in range (0, int(input(f"Введите количество ID: ")))]
-try:
-    for i in range(len(delete_tuple)):
-        delete_ID = delete_tuple.pop(0)
-        del students[int(delete_ID)]
-except KeyError:
-    print("Такого студента не существует :(")
-print(students)
